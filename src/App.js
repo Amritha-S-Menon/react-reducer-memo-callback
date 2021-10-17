@@ -1,23 +1,19 @@
 import logo from './logo.svg';
 import './App.css';
+import ReducerCounter from './Components/Reducer-counter';
+import MultipleReducerCounter from './Components/MultipleReducerCounter';
+import FocusRefHooks from './Components/FocusRefHooks';
+import TimerRefHook from './Components/TimerRefHook';
+import TimerRefHookOne from './Components/exampleTime';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      var tabs = require('count-tabs')(function (up) {
+  document.getElementById('tabs_counter').innerText = up
+})
+
+document.getElementById('my_id').innerText = tabs.id
     </div>
   );
 }
